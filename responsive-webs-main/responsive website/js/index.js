@@ -16,8 +16,8 @@ function myFunction() {
   
 //cart
 
-  let getOldSession=sessionStorage.getItem("cart") ;
-  let cart_values= getOldSession.split(",") ;
+  let getOldSession=sessionStorage.getItem("cart") ?? "";
+  let cart_values= getOldSession.split(",") ??[] ;
   function addToCart(item){
       let ifValueAlreadyExists = cart_values.find( value => value ==item );
       if(!ifValueAlreadyExists){
